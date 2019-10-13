@@ -1,0 +1,29 @@
+﻿@model RouteSegments
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SampleProjectForValidationNationalCode</title>
+</head>
+<body>
+
+    <table style="color:red">
+        <tr>
+            <th>Controller :</th>
+            <td>@Model.Controller</td>
+        </tr>
+        <tr>
+            <th>Controller :</th>
+            <td>@Model.Action</td>
+        </tr>
+        @foreach (var item in Model.Parameters.Keys)
+        {
+            <tr>
+                <th>@item :</th>
+                <td>@Model.Parameters[item]</td>
+            </tr>
+        }
+    </table>
+</body>
+</html>
+
+
