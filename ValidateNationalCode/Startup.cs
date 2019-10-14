@@ -33,9 +33,10 @@ namespace ValidateNationalCode
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseMvc(route=>
-             // route.MapRoute("default", "/{Controller}/{Action}/{NationalCode:FormatNationalCode}"));
-              route.MapRoute("default", "/{Controller}/{Action}/{NationalCode:regex([0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9])}"));
-          
+              route.MapRoute("default", "/{Controller}/{Action}/{NationalCode:FormatNationalCode}"));
+           //   route.MapRoute("default", "/{Controller}/{Action}/{NationalCode:int:length(10)}"));
+           // route.MapRoute("default", "/{Controller}/{Action}/{NationalCode:regex([0-9][0-9][0-9]-[0-9][0-9][0-9][0-9][0-9][0-9]-[0-9])}"));
+
             //app.Run(async (context) =>
             //{
             //    await context.Response.WriteAsync("Hello World!");
